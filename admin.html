@@ -1,0 +1,104 @@
+<!DOCTYPE html> <!-- Тип документа -->
+<html lang="ru"> <!-- Корневой элемент -->
+<head> <!-- Шапка -->
+    <meta charset="UTF-8"> <!-- Кодировка -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Адаптивность -->
+    <title>Админ панель - TechStore</title> <!-- Заголовок -->
+    <link rel="stylesheet" href="styles.css"> <!-- Стили -->
+</head> <!-- Конец head -->
+<body> <!-- Тело -->
+    <!-- Header -->
+    <header class="header"> <!-- Шапка сайта -->
+        <div class="container header-container"> <!-- Контейнер -->
+            <div class="logo"> <!-- Логотип -->
+                <a href="index.html"><h1>TechStore</h1></a> <!-- Ссылка на главную -->
+            </div> <!-- Конец логотипа -->
+            <nav class="nav" id="nav"> <!-- Навигация -->
+                <ul class="nav-list"> <!-- Список меню -->
+                    <li><a href="index.html">Каталог</a></li> <!-- Пункт -->
+                    <li><a href="favorites.html">Избранное <span class="badge" id="favCount">0</span></a></li> <!-- Избранное -->
+                    <li><a href="cart.html">Корзина <span class="badge" id="cartCount">0</span></a></li> <!-- Корзина -->
+                    <li><a href="profile.html">Личный кабинет</a></li> <!-- Профиль -->
+                    <li><a href="admin.html" class="active">Админ панель</a></li> <!-- Админ -->
+                    <li><a href="about.html">О нас</a></li> <!-- О нас -->
+                    <li><a href="contacts.html">Контакты</a></li> <!-- Контакты -->
+                </ul> <!-- Конец списка -->
+            </nav> <!-- Конец навигации -->
+            <button class="burger" id="burger"> <!-- Бургер -->
+                <span></span> <!-- Линия -->
+                <span></span> <!-- Линия -->
+                <span></span> <!-- Линия -->
+            </button> <!-- Конец кнопки -->
+        </div> <!-- Конец контейнера -->
+    </header> <!-- Конец header -->
+
+    <!-- Main Content -->
+    <main class="main"> <!-- Основной контент -->
+        <div class="container"> <!-- Контейнер -->
+            <div class="content-wrapper"> <!-- Обертка -->
+                <!-- Admin Sidebar -->
+                <aside class="sidebar"> <!-- Боковая панель -->
+                    <h3>Админ меню</h3> <!-- Заголовок -->
+                    <ul class="category-list"> <!-- Список меню -->
+                        <li><a href="admin.html" class="active">Общая статистика</a></li> <!-- Пункт -->
+                        <li><a href="admin-products.html">Все товары</a></li> <!-- Пункт -->
+                        <li><a href="admin-orders.html">Заказы</a></li> <!-- Пункт -->
+                        <li><a href="admin-categories.html">По категориям</a></li> <!-- Пункт -->
+                        <li><a href="admin-stock.html">Управление складом</a></li> <!-- Пункт -->
+                    </ul> <!-- Конец списка -->
+                </aside> <!-- Конец панели -->
+
+                <!-- Content Area -->
+                <div class="content"> <!-- Контент -->
+                    <h2>Админ панель - Статистика</h2> <!-- Заголовок -->
+                    <div class="admin-stats"> <!-- Статистика -->
+                        <div class="stat-card"> <!-- Карточка -->
+                            <h3>Всего товаров</h3> <!-- Заголовок -->
+                            <p class="stat-value" id="totalProducts">0</p> <!-- Значение -->
+                        </div> <!-- Конец карточки -->
+                        <div class="stat-card"> <!-- Карточка -->
+                            <h3>Заказано товаров</h3> <!-- Заголовок -->
+                            <p class="stat-value" id="totalOrdered">0</p> <!-- Значение -->
+                        </div> <!-- Конец карточки -->
+                        <div class="stat-card"> <!-- Карточка -->
+                            <h3>Куплено товаров</h3> <!-- Заголовок -->
+                            <p class="stat-value" id="totalPurchased">0</p> <!-- Значение -->
+                        </div> <!-- Конец карточки -->
+                        <div class="stat-card"> <!-- Карточка -->
+                            <h3>На складе всего</h3> <!-- Заголовок -->
+                            <p class="stat-value" id="totalStock">0</p> <!-- Значение -->
+                        </div> <!-- Конец карточки -->
+                        <div class="stat-card warning"> <!-- Карточка предупреждения -->
+                            <h3>Товары заканчиваются</h3> <!-- Заголовок -->
+                            <p class="stat-value" id="lowStock">0</p> <!-- Значение -->
+                        </div> <!-- Конец карточки -->
+                        <div class="stat-card danger"> <!-- Карточка опасности -->
+                            <h3>Нет в наличии</h3> <!-- Заголовок -->
+                            <p class="stat-value" id="outOfStock">0</p> <!-- Значение -->
+                        </div> <!-- Конец карточки -->
+                        <div class="stat-card"> <!-- Карточка -->
+                            <h3>В корзинах</h3> <!-- Заголовок -->
+                            <p class="stat-value" id="totalInCart">0</p> <!-- Значение -->
+                        </div> <!-- Конец карточки -->
+                        <div class="stat-card"> <!-- Карточка -->
+                            <h3>В избранном</h3> <!-- Заголовок -->
+                            <p class="stat-value" id="totalInFavorites">0</p> <!-- Значение -->
+                        </div> <!-- Конец карточки -->
+                    </div> <!-- Конец статистики -->
+                </div> <!-- Конец контента -->
+            </div> <!-- Конец обертки -->
+        </div> <!-- Конец контейнера -->
+    </main> <!-- Конец main -->
+
+    <!-- Footer -->
+    <footer class="footer"> <!-- Подвал -->
+        <div class="container"> <!-- Контейнер -->
+            <p>&copy; 2026 TechStore. Все права защищены.</p> <!-- Копирайт -->
+        </div> <!-- Конец контейнера -->
+    </footer> <!-- Конец подвала -->
+
+    <script src="data.js"></script> <!-- Данные -->
+    <script src="admin.js"></script> <!-- Скрипт страницы -->
+    <script src="auth.js"></script> <!-- Авторизация -->
+</body> <!-- Конец body -->
+</html> <!-- Конец документа -->
