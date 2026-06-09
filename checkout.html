@@ -1,0 +1,156 @@
+<!DOCTYPE html> <!-- Тип документа -->
+<html lang="ru"> <!-- Корневой элемент -->
+<head> <!-- Шапка -->
+    <meta charset="UTF-8"> <!-- Кодировка -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Адаптивность -->
+    <title>Оформление заказа - TechStore</title> <!-- Заголовок -->
+    <link rel="stylesheet" href="styles.css"> <!-- Стили -->
+</head> <!-- Конец head -->
+<body> <!-- Тело -->
+    <!-- Header -->
+    <header class="header"> <!-- Шапка сайта -->
+        <div class="container header-container"> <!-- Контейнер -->
+            <div class="logo"> <!-- Логотип -->
+                <a href="index.html"><h1>TechStore</h1></a> <!-- Ссылка на главную -->
+            </div> <!-- Конец логотипа -->
+            <nav class="nav" id="nav"> <!-- Навигация -->
+                <ul class="nav-list"> <!-- Список меню -->
+                    <li><a href="index.html">Каталог</a></li> <!-- Пункт -->
+                    <li><a href="favorites.html">Избранное <span class="badge" id="favCount">0</span></a></li> <!-- Избранное -->
+                    <li><a href="cart.html">Корзина <span class="badge" id="cartCount">0</span></a></li> <!-- Корзина -->
+                    <li><a href="profile.html">Личный кабинет</a></li> <!-- Профиль -->
+                    <li><a href="admin.html">Админ панель</a></li> <!-- Админ -->
+                    <li><a href="about.html">О нас</a></li> <!-- О нас -->
+                    <li><a href="contacts.html">Контакты</a></li> <!-- Контакты -->
+                </ul> <!-- Конец списка -->
+            </nav> <!-- Конец навигации -->
+            <button class="burger" id="burger"> <!-- Бургер -->
+                <span></span> <!-- Линия -->
+                <span></span> <!-- Линия -->
+                <span></span> <!-- Линия -->
+            </button> <!-- Конец кнопки -->
+        </div> <!-- Конец контейнера -->
+    </header> <!-- Конец header -->
+
+    <!-- Main Content -->
+    <main class="main"> <!-- Основной контент -->
+        <div class="container"> <!-- Контейнер -->
+            <div class="content-wrapper-full"> <!-- Обертка -->
+                <div class="content"> <!-- Контент -->
+                    <h2>Оформление заказа</h2> <!-- Заголовок -->
+                    
+                    <div class="checkout-container"> <!-- Контейнер оформления -->
+                        <!-- Форма заказа -->
+                        <div class="checkout-form-section"> <!-- Секция формы -->
+                            <h3>Данные покупателя</h3> <!-- Заголовок -->
+                            <form id="checkoutForm" class="checkout-form"> <!-- Форма -->
+                                <div class="form-group"> <!-- Группа -->
+                                    <label for="fullName">ФИО *</label> <!-- Метка -->
+                                    <input type="text" id="fullName" name="fullName" required placeholder="Иванов Иван Иванович"> <!-- Поле -->
+                                </div> <!-- Конец группы -->
+                                
+                                <div class="form-group"> <!-- Группа -->
+                                    <label for="phone">Телефон *</label> <!-- Метка -->
+                                    <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__"> <!-- Поле -->
+                                </div> <!-- Конец группы -->
+                                
+                                <div class="form-group"> <!-- Группа -->
+                                    <label for="email">Email *</label> <!-- Метка -->
+                                    <input type="email" id="email" name="email" required placeholder="example@mail.ru"> <!-- Поле -->
+                                </div> <!-- Конец группы -->
+                                
+                                <h3>Адрес доставки</h3> <!-- Заголовок -->
+                                
+                                <div class="form-group"> <!-- Группа -->
+                                    <label for="city">Город *</label> <!-- Метка -->
+                                    <input type="text" id="city" name="city" required placeholder="Москва"> <!-- Поле -->
+                                </div> <!-- Конец группы -->
+                                
+                                <div class="form-group"> <!-- Группа -->
+                                    <label for="street">Улица *</label> <!-- Метка -->
+                                    <input type="text" id="street" name="street" required placeholder="ул. Примерная"> <!-- Поле -->
+                                </div> <!-- Конец группы -->
+                                
+                                <div class="form-row"> <!-- Ряд -->
+                                    <div class="form-group"> <!-- Группа -->
+                                        <label for="house">Дом *</label> <!-- Метка -->
+                                        <input type="text" id="house" name="house" required placeholder="123"> <!-- Поле -->
+                                    </div> <!-- Конец группы -->
+                                    
+                                    <div class="form-group"> <!-- Группа -->
+                                        <label for="apartment">Квартира</label> <!-- Метка -->
+                                        <input type="text" id="apartment" name="apartment" placeholder="45"> <!-- Поле -->
+                                    </div> <!-- Конец группы -->
+                                </div> <!-- Конец ряда -->
+                                
+                                <div class="form-group"> <!-- Группа -->
+                                    <label for="postalCode">Индекс *</label> <!-- Метка -->
+                                    <input type="text" id="postalCode" name="postalCode" required placeholder="123456"> <!-- Поле -->
+                                </div> <!-- Конец группы -->
+                                
+                                <h3>Способ оплаты</h3> <!-- Заголовок -->
+                                
+                                <div class="form-group radio-group"> <!-- Группа радио -->
+                                    <label class="radio-label"> <!-- Метка -->
+                                        <input type="radio" name="paymentMethod" value="card" checked> <!-- Радио -->
+                                        <span>Банковская карта</span> <!-- Текст -->
+                                    </label> <!-- Конец метки -->
+                                    <label class="radio-label"> <!-- Метка -->
+                                        <input type="radio" name="paymentMethod" value="cash"> <!-- Радио -->
+                                        <span>Наличными при получении</span> <!-- Текст -->
+                                    </label> <!-- Конец метки -->
+                                    <label class="radio-label"> <!-- Метка -->
+                                        <input type="radio" name="paymentMethod" value="online"> <!-- Радио -->
+                                        <span>Онлайн оплата</span> <!-- Текст -->
+                                    </label> <!-- Конец метки -->
+                                </div> <!-- Конец группы -->
+                                
+                                <div class="form-group"> <!-- Группа -->
+                                    <label for="comment">Комментарий к заказу</label> <!-- Метка -->
+                                    <textarea id="comment" name="comment" rows="4" placeholder="Дополнительная информация..."></textarea> <!-- Поле -->
+                                </div> <!-- Конец группы -->
+                                
+                                <div class="form-actions"> <!-- Действия -->
+                                    <button type="button" class="btn btn-secondary" onclick="window.location.href='cart.html'">Вернуться в корзину</button> <!-- Кнопка -->
+                                    <button type="submit" class="btn btn-primary">Подтвердить заказ</button> <!-- Кнопка -->
+                                </div> <!-- Конец действий -->
+                            </form> <!-- Конец формы -->
+                        </div> <!-- Конец секции -->
+                        
+                        <!-- Сводка заказа -->
+                        <div class="checkout-summary"> <!-- Сводка -->
+                            <h3>Ваш заказ</h3> <!-- Заголовок -->
+                            <div id="orderSummary" class="order-summary"></div> <!-- Контейнер -->
+                            <div class="summary-total"> <!-- Итоги -->
+                                <div class="summary-row"> <!-- Ряд -->
+                                    <span>Товары:</span> <!-- Метка -->
+                                    <span id="summarySubtotal">0 ₽</span> <!-- Значение -->
+                                </div> <!-- Конец ряда -->
+                                <div class="summary-row"> <!-- Ряд -->
+                                    <span>Доставка:</span> <!-- Метка -->
+                                    <span id="summaryDelivery">Бесплатно</span> <!-- Значение -->
+                                </div> <!-- Конец ряда -->
+                                <div class="summary-row total"> <!-- Ряд -->
+                                    <span>Итого:</span> <!-- Метка -->
+                                    <span id="summaryTotal">0 ₽</span> <!-- Значение -->
+                                </div> <!-- Конец ряда -->
+                            </div> <!-- Конец итогов -->
+                        </div> <!-- Конец сводки -->
+                    </div> <!-- Конец контейнера -->
+                </div> <!-- Конец контента -->
+            </div> <!-- Конец обертки -->
+        </div> <!-- Конец контейнера -->
+    </main> <!-- Конец main -->
+
+    <!-- Footer -->
+    <footer class="footer"> <!-- Подвал -->
+        <div class="container"> <!-- Контейнер -->
+            <p>&copy; 2026 TechStore. Все права защищены.</p> <!-- Копирайт -->
+        </div> <!-- Конец контейнера -->
+    </footer> <!-- Конец подвала -->
+
+    <script src="data.js"></script> <!-- Данные -->
+    <script src="checkout.js"></script> <!-- Скрипт оформления -->
+    <script src="auth.js"></script> <!-- Авторизация -->
+</body> <!-- Конец body -->
+</html> <!-- Конец документа -->
