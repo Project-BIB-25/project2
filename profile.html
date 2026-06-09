@@ -1,0 +1,77 @@
+<!DOCTYPE html> <!-- Тип документа -->
+<html lang="ru"> <!-- Корневой элемент -->
+<head> <!-- Шапка -->
+    <meta charset="UTF-8"> <!-- Кодировка -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Адаптивность -->
+    <title>Личный кабинет - TechStore</title> <!-- Заголовок -->
+    <link rel="stylesheet" href="styles.css"> <!-- Стили -->
+</head> <!-- Конец head -->
+<body> <!-- Тело -->
+    <!-- Header -->
+    <header class="header"> <!-- Шапка сайта -->
+        <div class="container header-container"> <!-- Контейнер -->
+            <div class="logo"> <!-- Логотип -->
+                <a href="index.html"><h1>TechStore</h1></a> <!-- Ссылка на главную -->
+            </div> <!-- Конец логотипа -->
+            <nav class="nav" id="nav"> <!-- Навигация -->
+                <ul class="nav-list"> <!-- Список меню -->
+                    <li><a href="index.html">Каталог</a></li> <!-- Пункт -->
+                    <li><a href="favorites.html">Избранное <span class="badge" id="favCount">0</span></a></li> <!-- Избранное -->
+                    <li><a href="cart.html">Корзина <span class="badge" id="cartCount">0</span></a></li> <!-- Корзина -->
+                    <li><a href="profile.html" class="active">Личный кабинет</a></li> <!-- Профиль -->
+                    <li><a href="admin.html">Админ панель</a></li> <!-- Админ -->
+                    <li><a href="about.html">О нас</a></li> <!-- О нас -->
+                    <li><a href="contacts.html">Контакты</a></li> <!-- Контакты -->
+                </ul> <!-- Конец списка -->
+            </nav> <!-- Конец навигации -->
+            <button class="burger" id="burger"> <!-- Бургер -->
+                <span></span> <!-- Линия -->
+                <span></span> <!-- Линия -->
+                <span></span> <!-- Линия -->
+            </button> <!-- Конец кнопки -->
+        </div> <!-- Конец контейнера -->
+    </header> <!-- Конец header -->
+
+    <!-- Main Content -->
+    <main class="main"> <!-- Основной контент -->
+        <div class="container"> <!-- Контейнер -->
+            <div class="content-wrapper-full"> <!-- Обертка -->
+                <div class="content"> <!-- Контент -->
+                    <h2>Личный кабинет</h2> <!-- Заголовок -->
+                    <div class="profile-content"> <!-- Контент профиля -->
+                        <div class="profile-section"> <!-- Раздел -->
+                            <h3>История заказов</h3> <!-- Заголовок -->
+                            <div id="orderHistory"> <!-- История -->
+                                <p class="empty-message">История заказов пуста</p> <!-- Сообщение -->
+                            </div> <!-- Конец истории -->
+                        </div> <!-- Конец раздела -->
+                        
+                        <div class="profile-section"> <!-- Раздел -->
+                            <h3>Избранные товары (<span id="profileFavCount">0</span>)</h3> <!-- Заголовок -->
+                            <div class="products-grid" id="profileFavorites"></div> <!-- Сетка -->
+                        </div> <!-- Конец раздела -->
+                        
+                        <div class="profile-section"> <!-- Раздел -->
+                            <h3>Текущая корзина</h3> <!-- Заголовок -->
+                            <div id="profileCart"> <!-- Корзина -->
+                                <p class="empty-message">Корзина пуста</p> <!-- Сообщение -->
+                            </div> <!-- Конец корзины -->
+                        </div> <!-- Конец раздела -->
+                    </div> <!-- Конец контента -->
+                </div> <!-- Конец контента -->
+            </div> <!-- Конец обертки -->
+        </div> <!-- Конец контейнера -->
+    </main> <!-- Конец main -->
+
+    <!-- Footer -->
+    <footer class="footer"> <!-- Подвал -->
+        <div class="container"> <!-- Контейнер -->
+            <p>&copy; 2026 TechStore. Все права защищены.</p> <!-- Копирайт -->
+        </div> <!-- Конец контейнера -->
+    </footer> <!-- Конец подвала -->
+
+    <script src="data.js"></script> <!-- Данные -->
+    <script src="profile.js"></script> <!-- Скрипт профиля -->
+    <script src="auth.js"></script> <!-- Авторизация -->
+</body> <!-- Конец body -->
+</html> <!-- Конец документа -->
